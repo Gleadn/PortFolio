@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     if (req.url === '/') {
-      fs.readFile('./pages/home.html', (err, data) => {
+      fs.readFile('index.html', (err, data) => {
         if (err) {
           res.writeHead(404);
           res.write('Fichier non trouvé !');
